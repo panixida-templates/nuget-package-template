@@ -25,6 +25,7 @@
 - configure branch protection rules
 - configure Issues / Discussions if needed
 - configure repository description, topics and website
+- register the repository in the shared SonarQube inventory
 
 ### 5. Prepare the first release
 - update versioning configuration pathFilters in version.json
@@ -189,6 +190,11 @@ dotnet test --configuration Release
 dotnet pack --configuration Release
 ```
 
+### Continuous integration
+
+Pull requests run formatting, tests, and SonarQube analysis. Publishing from
+`main` starts only after the SonarQube Quality Gate succeeds.
+
 ### Full local validation
 
 ```bash
@@ -208,6 +214,7 @@ This repository uses:
 * Implicit usings enabled
 * Central package management
 * GitHub Actions
+* SonarQube
 * Nerdbank.GitVersioning
 
 Add more items only if they are actually relevant for the repository.
