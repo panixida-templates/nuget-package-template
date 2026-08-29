@@ -7,6 +7,7 @@
 - change assembly name
 - change repository URLs
 - change ProjectReference in test project
+- update the template smoke test namespace and expected assembly name
 
 ### 2. Update package metadata
 - description
